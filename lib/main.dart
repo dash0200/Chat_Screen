@@ -1,6 +1,7 @@
 import 'package:chat_screen/BottomNavBar.dart';
-import 'package:chat_screen/Chats.dart';
-import 'package:chat_screen/NavigationBar.dart';
+import 'package:chat_screen/Chats/ChatStructure.dart';
+import 'package:chat_screen/Chats/ChatStructure.dart';
+import 'package:chat_screen/TopNavigationBar.dart';
 import 'package:chat_screen/SearchBox.dart';
 import 'package:flutter/material.dart';
 
@@ -59,13 +60,7 @@ class _ChatState extends State<Chat> {
               ),
               NavigationBar(),
               SearchBox(),
-              Expanded(
-                  child: SizedBox(
-                height: 200,
-                child: ListView(
-                  children: [Chats()],
-                ),
-              ))
+              ChatStructure(),
             ],
           ),
         ),
