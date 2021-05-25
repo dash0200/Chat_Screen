@@ -1,7 +1,7 @@
 import 'package:chat_screen/BottomNavBar.dart';
 import 'package:chat_screen/Chats/ChatStructure.dart';
-import 'package:chat_screen/Chats/ChatStructure.dart';
-import 'package:chat_screen/TopNavigationBar.dart';
+import 'package:chat_screen/CategorySelector.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:chat_screen/SearchBox.dart';
 import 'package:flutter/material.dart';
 
@@ -25,22 +25,20 @@ class _ChatState extends State<Chat> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          title: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: Image.asset(
-              'assets/images/whatsapp.png',
-              width: 35,
-              height: 35,
-            ),
+          title: Image.asset(
+            'assets/images/speak.png',
+            width: 40,
+            height: 40,
           ),
           actions: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Icon(
-                Icons.bookmark_add_rounded,
+            IconButton(
+              icon: Icon(
+                EvaIcons.colorPaletteOutline,
                 color: Colors.red,
+                size: 31,
               ),
-            )
+              onPressed: () {},
+            ),
           ],
         ),
         body: Padding(
@@ -58,7 +56,7 @@ class _ChatState extends State<Chat> {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              NavigationBar(),
+              CategorySelector(),
               SearchBox(),
               ChatStructure(),
             ],
