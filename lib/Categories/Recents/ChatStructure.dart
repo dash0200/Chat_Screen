@@ -1,6 +1,5 @@
 import 'package:chat_screen/Categories/Recents/Chats.dart';
 import 'package:flutter/material.dart';
-import 'package:chat_screen/CategorySelector.dart';
 
 class ChatStructure extends StatelessWidget {
   @override
