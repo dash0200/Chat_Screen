@@ -1,5 +1,5 @@
 import 'package:chat_screen/BottomNavBar.dart';
-import 'package:chat_screen/Chats/ChatStructure.dart';
+import 'package:chat_screen/Categories/Recents/ChatStructure.dart';
 import 'package:chat_screen/CategorySelector.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:chat_screen/SearchBox.dart';
@@ -58,7 +58,7 @@ class _ChatState extends State<Chat> {
               ),
               CategorySelector(),
               SearchBox(),
-              ChatStructure(),
+              ChatStructure()
             ],
           ),
         ),

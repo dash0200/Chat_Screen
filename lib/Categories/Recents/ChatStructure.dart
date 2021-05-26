@@ -1,4 +1,4 @@
-import 'package:chat_screen/Chats/Chats.dart';
+import 'package:chat_screen/Categories/Recents/Chats.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_screen/CategorySelector.dart';
 

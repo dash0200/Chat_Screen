@@ -1,6 +1,5 @@
 import 'package:chat_screen/Categories/Broadcast.dart';
 import 'package:chat_screen/Categories/Groups.dart';
-import 'package:chat_screen/Chats/ChatStructure.dart';
 
 import 'package:flutter/material.dart';
 
