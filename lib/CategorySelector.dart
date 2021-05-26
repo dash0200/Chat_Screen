@@ -1,3 +1,7 @@
+import 'package:chat_screen/Categories/Broadcast.dart';
+import 'package:chat_screen/Categories/Groups.dart';
+import 'package:chat_screen/Chats/ChatStructure.dart';
+
 import 'package:flutter/material.dart';
 
 class CategorySelector extends StatefulWidget {
@@ -8,6 +12,8 @@ class CategorySelector extends StatefulWidget {
 class _CategorySelectorState extends State<CategorySelector> {
   int selectedIndex = 0;
   final List<String> categories = ['Recents', 'Broadcast List', 'Groups'];
+  final List pages = [BroadcastList(), Groups()];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,24 +27,36 @@ class _CategorySelectorState extends State<CategorySelector> {
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
               onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
+                setState(
+                  () {
+                    selectedIndex = index;
+                  },
+                );
               },
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Text(
-                      categories[index],
-                      style: TextStyle(
-                        color:
-                            index == selectedIndex ? Colors.black : Colors.grey,
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
+                    child: TextButton(
+                      child: Text(
+                        categories[index],
+                        style: TextStyle(
+                          color: index == selectedIndex
+                              ? Colors.black
+                              : Colors.grey,
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.2,
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => pages[index - 1]),
+                        );
+                      },
                     ),
                   ),
                 ],

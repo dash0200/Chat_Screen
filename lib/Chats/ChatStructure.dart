@@ -1,5 +1,6 @@
+import 'package:chat_screen/Chats/Chats.dart';
 import 'package:flutter/material.dart';
-import 'Chats.dart';
+import 'package:chat_screen/CategorySelector.dart';
 
 class ChatStructure extends StatelessWidget {
   @override
@@ -16,14 +17,13 @@ class ChatStructure extends StatelessWidget {
               leading: Container(
                 width: 50.0,
                 height: 100.0,
-                decoration: new BoxDecoration(
-                  // color: const Color(0xff7c94b6),
-                  image: new DecorationImage(
-                    image: new AssetImage(chat.link),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(chat.link),
                     fit: BoxFit.cover,
                   ),
-                  borderRadius: new BorderRadius.all(new Radius.circular(80.0)),
-                  border: new Border.all(color: Colors.white),
+                  borderRadius: BorderRadius.all(new Radius.circular(80.0)),
+                  border: Border.all(color: Colors.white),
                 ),
               ),
               trailing: Column(
