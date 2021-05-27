@@ -2,4 +2,4 @@
 
 A new Flutter project.
 
-![Screen](https://i.imgur.com/v29BVHz.png)
+![Screen](https://i.imgur.com/PNNmzZu.png)
